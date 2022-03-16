@@ -1,10 +1,17 @@
 import './header.css';
 import {Search,Notifications,Chat,Person} from '@mui/icons-material'
+import {Link} from 'react-router-dom'
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 const Header = () => {
+    const PF:string =( process.env.REACT_APP_PUBLIC_FOLDER as string)
+    const context = useContext(AuthContext)
     return (
         <div className='header-container'>
             <div className="header-left">
-              <span className='header-logo'>ElsamSocial</span>
+                <Link to='/' style={{textDecoration:'none'}}>
+                    <span className='header-logo'>ElsamSocial</span>
+                </Link>
             </div>
             <div className="header-center">
                 <div className="search-bar">
@@ -32,7 +39,11 @@ const Header = () => {
                         <span className="header-iconBadge">1</span>
                     </div>
                 </div>
-                <img src="assets/person/3.jpg" alt="" className="header-img" />
+                <Link to={`/profile/${context?.state.user.username}`}>
+                     <img src={context?.state.user.profilePicture ?
+                            PF+context.state.user.profilePicture :
+                        PF+'person/default-profile.jpg'} alt="" className="header-img" />
+                </Link>
             </div>
         </div>
     );

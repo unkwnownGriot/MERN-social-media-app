@@ -9,10 +9,11 @@ type UserProps ={
 }
 
 const Online = ({user}:UserProps) => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER
     return (
         <li className='rightbar-friend'>
             <div className="rightbar-profileContainer">
-               <img src={user.profilePicture} alt=""
+               <img src={PF+user.profilePicture} alt=""
                 className="rightbar-profilePic" />
                 <span className="rightbar-online"></span>
             </div>

@@ -10,9 +10,10 @@ type UserProps ={
 
 
 const CloseFriend = ({user}:UserProps) => {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER
     return (
        <li className='sidebar-friend'>
-           <img src={user.profilePicture} alt="" className="sidebar-friendImg" />
+           <img src={PF+user.profilePicture} alt="" className="sidebar-friendImg" />
            <span className="sidebar-friendName">{user.username}</span>
        </li>
     );

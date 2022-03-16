@@ -26,3 +26,58 @@
     margin-bottom: 15px;
     font-size: 17px;
 }
+.rightbar-followings{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.rightbar-followingImg{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.rightbar-Following{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.rightbar-followingUsername{
+    text-align: center;
+    margin-top: 5px;
+}
+.profile-rightbarTitle{
+    margin: 20px 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.rightbar-infoItems{
+    margin-bottom: 10px;
+}
+.user-infoKey{
+    color: #555;
+    margin-right: 15px;
+    font-weight: 500;
+}
+.user-infoValue{
+    font-weight: 300;
+}
+.rightbar-infoItem{
+    margin-bottom: 10px;
+}
+.follow-btn{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #1872f2;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
